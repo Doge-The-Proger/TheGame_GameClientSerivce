@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="OtusGameClientMVP.GamePage"
+             Loaded="ContentPage_Loaded"
+             Shell.NavBarIsVisible="False" NavigationPage.HasBackButton="False">
+    <AbsoluteLayout>
+        <Image Source="background.jpg" Aspect="Fill" />
+        <BoxView Color="Wheat"
+                 AbsoluteLayout.LayoutBounds="90, 60, 1100, 600" />
+        <Label Text="Да начнется игра!" FontSize="20"
+               AbsoluteLayout.LayoutBounds="600, 100" />
+        <Button x:Name="BackBtn" Text="Назад" TextColor="White" AbsoluteLayout.LayoutBounds="50, 600"
+                Clicked="BackBtn_Clicked"/>
+    </AbsoluteLayout>
+</ContentPage>

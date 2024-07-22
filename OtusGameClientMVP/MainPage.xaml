@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="OtusGameClientMVP.MainPage"
-             Loaded="ContentPage_Loaded" MinimumWidthRequest="1280" MinimumHeightRequest="720">
+             Loaded="ContentPage_Loaded" Shell.NavBarIsVisible="False" NavigationPage.HasBackButton="False">
     <Grid x:Name="RootGrid" HorizontalOptions="Fill" VerticalOptions="Fill">
         <Image Source="background.jpg" Aspect="Fill" Grid.Column="0" Grid.Row="0" />
         <Label Text="Made by Команда игры© 2024" TextColor="White" FontSize="Medium" HorizontalOptions="Start" VerticalOptions="End"/>
         <VerticalStackLayout x:Name="MenuStack" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="0"
-                             WidthRequest="600" HeightRequest="800" Spacing="30" Opacity="0" ZIndex="2">
+                             WidthRequest="600" HeightRequest="800" Spacing="30">
             <Label Text="Наша игра!" FontSize="Header" TextColor="White" HorizontalOptions="Center" />
             <Button x:Name="StartGameBtn" HorizontalOptions="Center" Text="Начать игру" TextColor="White"
                     Clicked="StartGameBtn_Clicked"/>
@@ -17,17 +17,7 @@
                     Clicked="ExitBtn_Clicked"/>
         </VerticalStackLayout>
 
-        <VerticalStackLayout x:Name="SettingsStack" HorizontalOptions="Center" VerticalOptions="Center" Grid.Column="0" Grid.Row="0"
-                     WidthRequest="600" HeightRequest="800" Spacing="30" Opacity="0" IsEnabled="False" ZIndex="1">
-            <Label Text="Настройки" FontSize="Header" TextColor="White" HorizontalOptions="Center" />
-            <Button x:Name="FullScreenToggle" HorizontalOptions="Center" Text="Полный экран вкл\выкл" TextColor="White"
-                    Clicked="FullScreenToggle_Clicked"/>
-            <Button x:Name="BackBtn" HorizontalOptions="Center" Text="Назад" TextColor="White"
-                    Clicked="BackBtn_Clicked"/>
-            <Button x:Name="ExitBtn2" HorizontalOptions="Center" Text="Выход" TextColor="White"
-                    Clicked="ExitBtn_Clicked"/>
-        </VerticalStackLayout>
-
+        <BoxView x:Name="PageSplash" BackgroundColor="Black" HorizontalOptions="Fill" VerticalOptions="Fill" />
         <Image x:Name="LoadingScreen" IsEnabled="False" Source="loading_screen.gif" IsAnimationPlaying="True"
                Aspect="Fill" Grid.Column="0" Grid.Row="0" />
     </Grid>
